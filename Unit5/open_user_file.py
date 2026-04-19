@@ -74,22 +74,22 @@ if __name__ == "__main__":
 
 
 
+
+
+
+
 '''
 try:
     with open ("./file.txt", 'r') as file:
-        # read() for reading enitre content at once, readline() to read one line at a time and readlines() to return a list of all the lines
+    
         content = file.read()
         print(content)
 
-        # after using any of the reading methods, python sets the cursor of that file to the very end (incase if I used the read() before. So to set the cursor to start again you will have to use the seek() method on the file to reset the cursor)
-
-        # Reset the cursor back to the start
         file.seek(0)
 
         readlines = file.readlines()
         print(readlines)
 
-        # To check where the cursor currently is at the file you can do
         print(file.tell())
 
 except FileNotFoundError as error:
